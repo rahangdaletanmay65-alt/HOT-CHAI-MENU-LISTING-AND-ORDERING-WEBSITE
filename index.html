@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOT Chai — Hearts of Tea | Police Nagar, Nagpur</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chai: {
+                            50: '#FDF8F5',
+                            100: '#F9ECE4',
+                            200: '#F2D7C7',
+                            600: '#C94835',
+                            700: '#9E3221',
+                            brown: '#6F3E25',
+                            coffee: '#35251F',
+                            cream: '#FFF4E5',
+                            terracotta: '#C94835',
+                            golden: '#E8AC45'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+        
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FFF4E5] text-[#35251F] font-sans antialiased selection:bg-[#E8AC45] selection:text-[#35251F]">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-[#6F3E25] text-amber-100 text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <span>📍 Police Nagar, Hingna Road, Digdoh, Nagpur</span> &nbsp;|&nbsp; <span>☕ Open Daily: 8:00 AM - 11:00
+            PM</span> &nbsp;|&nbsp; <span class="text-[#E8AC45]">Made for Chai Lovers ❤️</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-amber-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div
+                        class="w-11 h-11 rounded-full bg-[#6F3E25] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <i data-lucide="coffee" class="w-6 h-6 text-[#E8AC45]"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black font-serif tracking-tight text-[#6F3E25]">HOT <span
+                                class="text-[#C94835]">Chai</span></span>
+                        <span class="block text-[10px] uppercase tracking-widest text-[#35251F]/70 font-semibold">Hearts
+                            of Tea</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-[#35251F]">
+                    <a href="#home" class="hover:text-[#C94835] transition-colors">Home</a>
+                    <a href="#menu" class="hover:text-[#C94835] transition-colors">Menu</a>
+                    <a href="#offers" class="hover:text-[#C94835] transition-colors">Offers</a>
+                    <a href="#gallery" class="hover:text-[#C94835] transition-colors">Gallery</a>
+                    <a href="#about" class="hover:text-[#C94835] transition-colors">About</a>
+                    <a href="#contact" class="hover:text-[#C94835] transition-colors">Contact</a>
+                </div>
+
+                <!-- Right Action Icons -->
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleAdminModal()"
+                        class="hidden sm:flex items-center gap-1.5 px-3 py-2 text-xs font-semibold bg-amber-50 text-[#6F3E25] border border-amber-200 rounded-lg hover:bg-amber-100 transition-colors"
+                        title="Admin Panel">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Admin
+                    </button>
+
+                    <button onclick="toggleCartDrawer()"
+                        class="relative p-2.5 rounded-full bg-[#6F3E25] text-white hover:bg-[#35251F] transition-colors shadow-sm"
+                        aria-label="Cart">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        <span id="cart-badge"
+                            class="absolute -top-1 -right-1 bg-[#C94835] text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                    </button>
+
+                    <a href="#menu"
+                        class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C94835] hover:bg-[#9E3221] text-white font-semibold shadow-md transition-all">
+                        Order Now
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()"
+                        class="md:hidden p-2 rounded-lg text-[#6F3E25] hover:bg-amber-50">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-amber-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" onclick="toggleMobileMenu()"
+                class="block py-2 px-3 rounded-md hover:bg-amber-50 font-medium">Home</a>
+            <a href="#menu" onclick="toggleMobileMenu()"
+                class="block py-2 px-3 rounded-md hover:bg-amber-50 font-medium">Menu</a>
+            <a href="#offers" onclick="toggleMobileMenu()"
+                class="block py-2 px-3 rounded-md hover:bg-amber-50 font-medium">Offers</a>
+            <a href="#gallery" onclick="toggleMobileMenu()"
+                class="block py-2 px-3 rounded-md hover:bg-amber-50 font-medium">Gallery</a>
+            <a href="#about" onclick="toggleMobileMenu()"
+                class="block py-2 px-3 rounded-md hover:bg-amber-50 font-medium">About Us</a>
+            <a href="#contact" onclick="toggleMobileMenu()"
+                class="block py-2 px-3 rounded-md hover:bg-amber-50 font-medium">Contact</a>
+            <button onclick="toggleAdminModal(); toggleMobileMenu();"
+                class="w-full text-left py-2 px-3 rounded-md hover:bg-amber-50 font-medium text-[#6F3E25] flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4"></i> Admin Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-[#FFF4E5] to-amber-100/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 text-[#6F3E25] text-xs font-bold tracking-wide uppercase shadow-sm">
+                        <span>✨ Made for Chai Lovers ❤️</span>
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-6xl font-extrabold font-serif text-[#35251F] tracking-tight leading-tight">
+                        Your Daily Dose of <span class="text-[#C94835]">Happiness.</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-[#35251F]/80 max-w-2xl mx-auto lg:mx-0 font-normal">
+                        From kadak chai and buttery Bun Maska to cheesy Maggi and mouth-watering sandwiches, find your
+                        comfort food at HOT Chai.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#menu" onclick="scrollToMenu(event)" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#6F3E25] hover:bg-[#35251F] text-white font-bold text-base shadow-lg transition-all text-center cursor-pointer">
+                        Explore Our Menu
+                        </a>
+                        <button onclick="openDineInModal()"
+                            class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-amber-50 text-[#6F3E25] border-2 border-[#6F3E25]/20 font-bold text-base shadow-sm transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="utensils" class="w-5 h-5 text-[#C94835]"></i> Order for Dine-In
+                        </button>
+                    </div>
+
+                    <!-- Trust badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-amber-200/60 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl font-bold text-[#6F3E25]">100%</p>
+                            <p class="text-xs text-[#35251F]/70">Pure Fresh Brews</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-[#6F3E25]">₹12+</p>
+                            <p class="text-xs text-[#35251F]/70">Pocket Friendly</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-[#6F3E25]">Nagpur</p>
+                            <p class="text-xs text-[#35251F]/70">Police Nagar Hub</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visuals -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-r from-[#E8AC45] to-[#C94835] rounded-3xl blur-xl opacity-30 animate-pulse">
+                        </div>
+                        <div
+                            class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-amber-50 aspect-[4/3]">
+                            <img src="https://www.sharmispassions.com/wp-content/uploads/2026/08/bun-maska22.jpg"
+                                alt="Steaming Indian Chai and Bun Maska"
+                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <!-- Floating Tag -->
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-amber-100 flex items-center gap-3">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-[#6F3E25]">
+                                <i data-lucide="award" class="w-6 h-6 text-[#E8AC45]"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">Signature Special</p>
+                                <p class="text-sm font-bold text-[#35251F]">Adrak Chai & Bun Maska</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="bg-[#6F3E25] text-amber-100 py-6 px-4 shadow-inner">
+        <div
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-3">
+                <i data-lucide="sparkles" class="w-7 h-7 text-[#E8AC45]"></i>
+                <span class="text-lg sm:text-xl font-bold font-serif">"Chai + Bun Maska = Perfect Happiness ❤️"</span>
+            </div>
+            <a href="#menu"
+                class="px-6 py-2.5 rounded-full bg-[#E8AC45] hover:bg-[#db9d36] text-[#35251F] font-bold text-sm shadow transition-colors">
+                Explore Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <h2 class="text-3xl sm:text-4xl font-black font-serif text-[#35251F]">Our Delicious Menu</h2>
+            <p class="text-[#35251F]/70">Explore our authentic range of hot beverages, buttery buns, cheesy maggi, and
+                snacks freshly prepared for you.</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+            <!-- Search Bar -->
+            <div class="relative w-full md:w-96">
+                <i data-lucide="search" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                <input type="text" id="menu-search" oninput="filterMenu()" placeholder="Search chai, burgers, maggi..."
+                    class="w-full pl-11 pr-4 py-3 rounded-full bg-white border border-amber-200 focus:outline-none focus:ring-2 focus:ring-[#C94835] text-sm shadow-sm">
+            </div>
+
+            <!-- Sort By -->
+            <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+                <select id="sort-select" onchange="filterMenu()"
+                    class="px-4 py-3 rounded-full bg-white border border-amber-200 text-sm font-medium text-[#35251F] focus:outline-none focus:ring-2 focus:ring-[#C94835] shadow-sm">
+                    <option value="default">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+                <button onclick="resetFilters()"
+                    class="px-4 py-3 text-sm font-medium text-[#6F3E25] bg-white border border-amber-200 rounded-full hover:bg-amber-50 shadow-sm">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-10 hide-scrollbar" id="category-tabs">
+            <button onclick="switchCategory('All')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-[#6F3E25] text-white shadow-sm transition-all"
+                data-category="All">Show All</button>
+            <button onclick="switchCategory('Hot Beverages')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Hot Beverages">☕ Hot Beverages</button>
+            <button onclick="switchCategory('Bun Maska')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Bun Maska">🍞 Bun Maska</button>
+            <button onclick="switchCategory('Vada Pav')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Vada Pav">🥔 Vada Pav</button>
+            <button onclick="switchCategory('French Fries')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="French Fries">🍟 French Fries</button>
+            <button onclick="switchCategory('Maggi')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Maggi">🍜 Maggi</button>
+            <button onclick="switchCategory('Pasta')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Pasta">🍝 Pasta</button>
+            <button onclick="switchCategory('Sandwiches')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Sandwiches">🥪 Sandwiches</button>
+            <button onclick="switchCategory('Burgers')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Burgers">🍔 Burgers</button>
+            <button onclick="switchCategory('Toast')"
+                class="category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all"
+                data-category="Toast">🍞 Toast</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Dynamically populated by JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="no-products" class="hidden text-center py-16 space-y-3">
+            <i data-lucide="frown" class="w-12 h-12 text-[#6F3E25] mx-auto opacity-50"></i>
+            <h3 class="text-xl font-bold font-serif text-[#35251F]">No items found</h3>
+            <p class="text-gray-500 text-sm">Try searching for something else or reset your filters.</p>
+            <button onclick="resetFilters()"
+                class="mt-2 px-5 py-2 rounded-full bg-[#6F3E25] text-white text-sm font-medium">Reset Filters</button>
+        </div>
+    </section>
+
+    <!-- Customer Favorites & Special Offers -->
+    <section id="offers" class="py-16 bg-amber-100/50 border-y border-amber-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#C94835]">Special Promotions</span>
+                <h2 class="text-3xl font-bold font-serif text-[#35251F]">Customer Favorites & Combos</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Offer Card 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-md border border-amber-200 relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-[#C94835] text-white text-xs font-bold px-4 py-1.5 rounded-bl-2xl">
+                        Bestseller Combo</div>
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6F3E25]/10 flex items-center justify-center text-[#6F3E25] mb-4">
+                        <i data-lucide="coffee" class="w-7 h-7 text-[#C94835]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-[#35251F] mb-1">Chai + Bun Maska</h3>
+                    <p class="text-sm text-gray-600 mb-4">The timeless classic pairing of hot Adrak/Elaichi Chai with
+                        freshly toasted buttery Bun Maska.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-[#6F3E25]">₹33 onwards</span>
+                        <button onclick="addComboToCart('Chai + Bun Maska', 33)"
+                            class="px-4 py-2 rounded-full bg-[#6F3E25] text-white text-xs font-bold hover:bg-[#35251F]">Order
+                            Combo</button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-md border border-amber-200 relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-[#E8AC45] text-[#35251F] text-xs font-bold px-4 py-1.5 rounded-bl-2xl">
+                        Evening Special</div>
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6F3E25]/10 flex items-center justify-center text-[#6F3E25] mb-4">
+                        <i data-lucide="utensils" class="w-7 h-7 text-[#E8AC45]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-[#35251F] mb-1">Maggi & Vada Pav Feast</h3>
+                    <p class="text-sm text-gray-600 mb-4">Hot steaming Masala Maggi paired with crispy Bombay Vada Pav
+                        for the ultimate hunger fix.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-[#6F3E25]">₹75 onwards</span>
+                        <button onclick="addComboToCart('Maggi & Vada Pav Feast', 75)"
+                            class="px-4 py-2 rounded-full bg-[#6F3E25] text-white text-xs font-bold hover:bg-[#35251F]">Order
+                            Combo</button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-md border border-amber-200 relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-2xl">
+                        Group Hangout</div>
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6F3E25]/10 flex items-center justify-center text-[#6F3E25] mb-4">
+                        <i data-lucide="users" class="w-7 h-7 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-[#35251F] mb-1">Snackers Delight</h3>
+                    <p class="text-sm text-gray-600 mb-4">Cheesy fries, Peri Peri burgers, and Hazelnut coffee for
+                        friends sharing stories.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-[#6F3E25]">₹195 onwards</span>
+                        <button onclick="addComboToCart('Snackers Delight', 195)"
+                            class="px-4 py-2 rounded-full bg-[#6F3E25] text-white text-xs font-bold hover:bg-[#35251F]">Order
+                            Combo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Café Photo Gallery -->
+    <section id="gallery" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C94835]">A Glimpse of HOT Chai</span>
+            <h2 class="text-3xl font-bold font-serif text-[#35251F]">Good food, cozy corners, and memories worth
+                sharing.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="rounded-3xl overflow-hidden shadow-md aspect-[4/3] relative group cursor-pointer"
+                onclick= "openLightbox('./Cafe6.jpeg', 'Cafe interior & Exterior')">
+                <img src="./Cafe6.jpeg" alt="Café Exterior"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <p class="text-white font-semibold text-sm">Café Interior & Seating</p>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-md aspect-[4/3] relative group cursor-pointer"
+                onclick="openLightbox('./Cafe5.jpeg', 'Freshly brewed Adrak Chai in kulhad')">
+                <img src="./Cafe5.jpeg" alt="Our Chai"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <p class="text-white font-semibold text-sm">Our Signature Chai</p>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-md aspect-[4/3] relative group cursor-pointer"
+                onclick="openLightbox('./Cafe1.jpeg', 'Crispy Veg Burger & Fries')">
+                <img src="./Cafe1.jpeg" alt="Food and Snacks"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <p class="text-white font-semibold text-sm">Burger & Snack Corner</p>
+
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-md aspect-[4/3] relative group cursor-pointer"
+                onclick="openLightbox('./Cafe2.jpeg', 'Buttery Bun Maska toast')">
+                <img src="./Cafe2.jpeg" alt="Bun Maska Moments"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <p class="text-white font-semibold text-sm">Bun Maska Moments</p>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-md aspect-[4/3] relative group cursor-pointer"
+                onclick="openLightbox('./Cafe3.jpeg', 'Cheesy Maggi Bowl')">
+                <img src="./Cafe3.jpeg" alt="Customer Experience"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <p class="text-white font-semibold text-sm">Cheesy Maggi Bowls</p>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-md aspect-[4/3] relative group cursor-pointer"
+                onclick="openLightbox('./HOT Menu.jpeg', 'Happy customers hanging out')">
+                <img src="HOT Menu.jpeg" alt="Vibes at HOT Chai"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <p class="text-white font-semibold text-sm">Great Vibes & Memories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-[#6F3E25] text-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#E8AC45]">Our Story</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">More Than Chai. It's a Feeling.
+                    </h2>
+                    <p class="text-amber-100/90 text-base leading-relaxed">
+                        At <strong>HOT Chai — Hearts of Tea</strong>, located right in the heart of Police Nagar,
+                        Nagpur, we believe happiness can be found in the simplest things: a hot cup of chai, buttery Bun
+                        Maska, a plate of Maggi, and conversations that last longer than expected.
+                    </p>
+                    <p class="text-amber-100/90 text-base leading-relaxed">
+                        Whether you're catching up with friends after college, taking a quick work break, or simply
+                        craving your favorite snack, HOT Chai is here to make the moment special.
+                    </p>
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <p class="text-3xl font-bold font-serif text-[#E8AC45]">100%</p>
+                            <p class="text-xs text-amber-200">Fresh Ingredients</p>
+                        </div>
+                        <div class="border-l border-amber-300/30 pl-6">
+                            <p class="text-3xl font-bold font-serif text-[#E8AC45]">Nagpur's</p>
+                            <p class="text-xs text-amber-200">Favorite Adda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-900/50 aspect-[4/3]">
+                        <img src="Cafe5.jpeg"
+                            alt="Café Ambiance" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact and Location Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C94835]">Find Us</span>
+            <h2 class="text-3xl font-bold font-serif text-[#35251F]">Visit HOT Chai Today</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Contact Card -->
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-amber-200 space-y-6">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#6F3E25]/10 flex items-center justify-center text-[#6F3E25] shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-[#C94835]"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#35251F] text-lg">Address</h4>
+                        <p class="text-sm text-gray-600 mt-1">HOT Chai — Hearts of Tea<br>Police Nagar, Hingna Road,
+                            Digdoh, Nagpur, Maharashtra 440016, India</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#6F3E25]/10 flex items-center justify-center text-[#6F3E25] shrink-0">
+                        <i data-lucide="clock" class="w-6 h-6 text-[#C94835]"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#35251F] text-lg">Opening Hours</h4>
+                        <p class="text-sm text-gray-600 mt-1">Monday – Sunday: 8:00 AM – 11:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#6F3E25]/10 flex items-center justify-center text-[#6F3E25] shrink-0">
+                        <i data-lucide="phone" class="w-6 h-6 text-[#C94835]"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#35251F] text-lg">Quick Contact</h4>
+                        <p class="text-sm text-gray-600 mt-1">+91 98765 43210 / Dine-In Desk</p>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex gap-4">
+                    <a href="https://maps.google.com/?q=Police+Nagar+Hingna+Road+Digdoh+Nagpur" target="_blank"
+                        class="flex-1 px-4 py-3 bg-[#6F3E25] text-white rounded-full text-center text-sm font-semibold hover:bg-[#35251F]">Get
+                        Directions</a>
+                    <button onclick="openDineInModal()"
+                        class="flex-1 px-4 py-3 bg-amber-100 text-[#6F3E25] rounded-full text-center text-sm font-semibold hover:bg-amber-200">Table
+                        Order</button>
+                </div>
+            </div>
+
+            <!-- Map Placeholder / Image -->
+            <div
+                class="rounded-3xl overflow-hidden shadow-md border border-amber-200 h-[400px] relative bg-amber-100 flex items-center justify-center">
+                <img src="Screenshot 2026-10-14 141758.png"
+                    alt="Nagpur Map Location" class="w-full h-full object-cover opacity-90">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent flex flex-col justify-end p-6 text-white">
+                    <p class="font-bold text-lg">Police Nagar, Hingna Road, Nagpur</p>
+                    <p class="text-xs text-amber-200">Click Get Directions to open Google Maps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#35251F] text-amber-100 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#6F3E25] flex items-center justify-center text-white">
+                            <i data-lucide="coffee" class="w-5 h-5 text-[#E8AC45]"></i>
+                        </div>
+                        <span class="text-2xl font-black font-serif text-white">HOT <span
+                                class="text-[#C94835]">Chai</span></span>
+                    </div>
+                    <p class="text-sm text-amber-100/70">
+                        Every Sip Has a Story. Good Chai, Great Vibes, Better Memories at Police Nagar, Nagpur.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4 text-base">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-amber-100/70">
+                        <li><a href="#home" class="hover:text-[#E8AC45]">Home</a></li>
+                        <li><a href="#menu" class="hover:text-[#E8AC45]">Our Menu</a></li>
+                        <li><a href="#offers" class="hover:text-[#E8AC45]">Special Offers</a></li>
+                        <li><a href="#gallery" class="hover:text-[#E8AC45]">Photo Gallery</a></li>
+                        <li><a href="#about" class="hover:text-[#E8AC45]">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4 text-base">Menu Highlights</h4>
+                    <ul class="space-y-2.5 text-sm text-amber-100/70">
+                        <li><a href="#menu" class="hover:text-[#E8AC45]">Adrak & Elaichi Chai</a></li>
+                        <li><a href="#menu" class="hover:text-[#E8AC45]">Bun Maska Butter</a></li>
+                        <li><a href="#menu" class="hover:text-[#E8AC45]">Bombay Vada Pav</a></li>
+                        <li><a href="#menu" class="hover:text-[#E8AC45]">Cheesy Maggi</a></li>
+                        <li><a href="#menu" class="hover:text-[#E8AC45]">Paneer Burgers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4 text-base">Connect with Us</h4>
+                    <p class="text-sm text-amber-100/70 mb-4">Police Nagar, Hingna Road, Digdoh, Nagpur, Maharashtra,
+                        India.</p>
+                    <div class="flex items-center gap-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C94835] transition-colors"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C94835] transition-colors"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C94835] transition-colors"><i
+                                data-lucide="message-circle" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-amber-100/60 gap-4">
+                <p>&copy; 2026 HOT Chai — Hearts of Tea. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Slide-over Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/50 transition-opacity" onclick="toggleCartDrawer()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <!-- Cart Header -->
+                <div class="p-6 bg-[#6F3E25] text-white flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="shopping-bag" class="w-6 h-6 text-[#E8AC45]"></i>
+                        <h3 class="text-lg font-bold font-serif">Your Cart (<span id="cart-item-count">0</span>)</h3>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="p-1 rounded-full hover:bg-white/10 text-white">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Table Banner if Dine-in Selected -->
+                <div id="cart-table-banner"
+                    class="bg-amber-50 border-b border-amber-200 px-6 py-2.5 text-xs font-semibold text-[#6F3E25] flex items-center justify-between">
+                    <span id="cart-table-text">Dine-in: Not Selected</span>
+                    <button onclick="openDineInModal(); toggleCartDrawer();"
+                        class="text-[#C94835] underline font-bold">Change Table</button>
+                </div>
+
+                <!-- Cart Items List -->
+                <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-gray-100">
+                    <!-- Cart items rendered here -->
+                </div>
+
+                <!-- Empty Cart State -->
+                <div id="empty-cart"
+                    class="hidden flex-1 flex flex-col items-center justify-center p-6 text-center space-y-3">
+                    <i data-lucide="shopping-cart" class="w-16 h-16 text-gray-300"></i>
+                    <h4 class="font-bold font-serif text-lg text-[#35251F]">Your cart is empty</h4>
+                    <p class="text-xs text-gray-500">Explore our delicious chai and snacks and add something to your
+                        cart!</p>
+                    <button onclick="toggleCartDrawer()"
+                        class="mt-2 px-6 py-2.5 bg-[#6F3E25] text-white text-xs font-bold rounded-full">Continue
+                        Shopping</button>
+                </div>
+
+                <!-- Cart Footer & Checkout -->
+                <div id="cart-footer" class="p-6 bg-amber-50/50 border-t border-amber-200 space-y-4">
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between text-gray-600">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">₹0</span>
+                        </div>
+                        <div
+                            class="flex justify-between font-bold text-lg text-[#35251F] pt-2 border-t border-amber-200">
+                            <span>Total Amount</span>
+                            <span id="cart-total" class="text-[#C94835]">₹0</span>
+                        </div>
+                    </div>
+                    <button onclick="proceedToCheckout()"
+                        class="w-full py-3.5 bg-[#C94835] hover:bg-[#9E3221] text-white font-bold rounded-full shadow-md text-center transition-all flex items-center justify-center gap-2">
+                        Proceed to Checkout <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dine-In Table Selection Modal -->
+    <div id="dine-in-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="fixed inset-0 bg-black/50 transition-opacity" onclick="closeDineInModal()"></div>
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div
+                class="inline-block w-full max-w-lg p-8 my-8 text-left align-middle transition-all transform bg-white shadow-2xl rounded-3xl relative">
+                <div class="flex items-center justify-between pb-4 border-b border-amber-100 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold font-serif text-[#35251F]">Select Dine-In Table</h3>
+                        <p class="text-xs text-gray-500">Choose your table at HOT Chai, Police Nagar, Nagpur</p>
+                    </div>
+                    <button onclick="closeDineInModal()" class="p-1 rounded-full hover:bg-gray-100">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Tables Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6" id="tables-grid">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="flex justify-end gap-3">
+                    <button onclick="closeDineInModal()"
+                        class="px-5 py-2.5 rounded-full border border-gray-300 text-xs font-bold text-gray-700">Cancel</button>
+                    <button onclick="confirmTableSelection()" id="confirm-table-btn" disabled
+                        class="px-6 py-2.5 rounded-full bg-[#6F3E25] text-white text-xs font-bold opacity-50 cursor-not-allowed">Confirm
+                        Table</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="fixed inset-0 bg-black/50 transition-opacity" onclick="closeCheckoutModal()"></div>
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div
+                class="inline-block w-full max-w-xl p-8 my-8 text-left align-middle transition-all transform bg-white shadow-2xl rounded-3xl relative">
+                <div class="flex items-center justify-between pb-4 border-b border-amber-100 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold font-serif text-[#35251F]">Complete Your Order</h3>
+                        <p class="text-xs text-gray-500">Table: <span id="checkout-table-display"
+                                class="font-bold text-[#6F3E25]">Table 01</span></p>
+                    </div>
+                    <button onclick="closeCheckoutModal()" class="p-1 rounded-full hover:bg-gray-100">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="checkout-form" onsubmit="submitOrder(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-[#35251F] mb-1">Your Name *</label>
+                        <input type="text" id="cust-name" required placeholder="Enter your name"
+                            class="w-full px-4 py-3 rounded-xl bg-amber-50/50 border border-amber-200 text-sm focus:ring-2 focus:ring-[#C94835] focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-[#35251F] mb-1">Phone Number
+                            (Optional)</label>
+                        <input type="tel" id="cust-phone" placeholder="10-digit mobile number"
+                            class="w-full px-4 py-3 rounded-xl bg-amber-50/50 border border-amber-200 text-sm focus:ring-2 focus:ring-[#C94835] focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-[#35251F] mb-1">Order Notes
+                            (Optional)</label>
+                        <textarea id="cust-notes" rows="2" placeholder="E.g., Less sugar in chai, extra spicy maggi..."
+                            class="w-full px-4 py-3 rounded-xl bg-amber-50/50 border border-amber-200 text-sm focus:ring-2 focus:ring-[#C94835] focus:outline-none"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-[#35251F] mb-2">Payment Method *</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label
+                                class="border border-amber-200 rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:bg-amber-50">
+                                <input type="radio" name="payment-method" value="upi" checked class="text-[#C94835]">
+                                <span class="text-sm font-semibold">UPI / QR Scan</span>
+                            </label>
+                            <label
+                                class="border border-amber-200 rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:bg-amber-50">
+                                <input type="radio" name="payment-method" value="counter" class="text-[#C94835]">
+                                <span class="text-sm font-semibold">Pay at Counter</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-amber-50 rounded-2xl flex items-center justify-between text-sm font-bold">
+                        <span>Total Payable:</span>
+                        <span id="checkout-total" class="text-lg text-[#C94835]">₹0</span>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-4 bg-[#6F3E25] hover:bg-[#35251F] text-white font-bold rounded-full shadow-md text-center transition-all">
+                        Place Order Now ❤️
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmation-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="fixed inset-0 bg-black/50 transition-opacity"></div>
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div
+                class="inline-block w-full max-w-md p-8 my-8 text-center transition-all transform bg-white shadow-2xl rounded-3xl relative space-y-4">
+                <div
+                    class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-serif text-[#35251F]">Order Confirmed! ❤️</h3>
+                <p class="text-sm text-gray-600">Sit back, relax, and let the good times brew.</p>
+
+                <div class="bg-amber-50 p-4 rounded-2xl text-left space-y-2 text-xs">
+                    <div class="flex justify-between font-semibold"><span class="text-gray-500">Order ID:</span> <span
+                            id="conf-order-id" class="text-[#6F3E25]">#HCHAI-1092</span></div>
+                    <div class="flex justify-between font-semibold"><span class="text-gray-500">Table:</span> <span
+                            id="conf-table">Table 01</span></div>
+                    <div class="flex justify-between font-semibold"><span class="text-gray-500">Customer:</span> <span
+                            id="conf-name">Guest</span></div>
+                    <div class="flex justify-between font-semibold"><span class="text-gray-500">Status:</span> <span
+                            class="text-emerald-600 font-bold">Preparing (Kitchen Active)</span></div>
+                </div>
+
+                <button onclick="closeConfirmationModal()"
+                    class="w-full py-3.5 bg-[#6F3E25] text-white font-bold rounded-full text-sm">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4"
+        onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white p-2 rounded-full bg-white/10 hover:bg-white/20">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-4xl max-h-[85vh] text-center space-y-3" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Gallery Lightbox"
+                class="max-w-full max-h-[70vh] rounded-2xl mx-auto shadow-2xl object-contain">
+            <p id="lightbox-caption" class="text-white text-base font-medium"></p>
+        </div>
+    </div>
+
+    <!-- Protected Admin Dashboard Modal -->
+    <div id="admin-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="fixed inset-0 bg-black/50 transition-opacity" onclick="toggleAdminModal()"></div>
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div
+                class="inline-block w-full max-w-4xl p-6 sm:p-8 my-8 text-left align-middle transition-all transform bg-white shadow-2xl rounded-3xl relative">
+
+                <!-- Admin PIN Screen -->
+                <div id="admin-login-view" class="space-y-6 max-w-sm mx-auto py-8 text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#6F3E25]/10 text-[#6F3E25] flex items-center justify-center mx-auto">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold font-serif text-[#35251F]">Owner Login</h3>
+                        <p class="text-xs text-gray-500 mt-1">Enter admin PIN (Default: 1234)</p>
+                    </div>
+                    <input type="password" id="admin-pin-input" placeholder="Enter 4-digit PIN"
+                        class="w-full text-center tracking-widest text-lg px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 focus:outline-none focus:ring-2 focus:ring-[#C94835]">
+                    <button onclick="verifyAdminPin()"
+                        class="w-full py-3 bg-[#6F3E25] text-white font-bold rounded-full text-sm">Access
+                        Dashboard</button>
+                </div>
+
+                <!-- Admin Dashboard View -->
+                <div id="admin-dashboard-view" class="hidden space-y-6">
+                    <div class="flex items-center justify-between pb-4 border-b border-amber-100">
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-[#35251F]">HOT Chai — Admin Control Panel</h3>
+                            <p class="text-xs text-gray-500">Manage live menu pricing, table statuses, and customer
+                                orders</p>
+                        </div>
+                        <button onclick="toggleAdminModal()" class="p-2 rounded-full hover:bg-gray-100">
+                            <i data-lucide="x" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <!-- Admin Tabs -->
+                    <div class="flex gap-2 border-b border-gray-200 pb-2">
+                        <button onclick="switchAdminTab('menu')" id="admin-tab-menu"
+                            class="px-4 py-2 rounded-lg bg-[#6F3E25] text-white text-xs font-bold">Menu
+                            Management</button>
+                        <button onclick="switchAdminTab('orders')" id="admin-tab-orders"
+                            class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-xs font-bold">Live Orders (<span
+                                id="admin-order-count">0</span>)</button>
+                        <button onclick="switchAdminTab('tables')" id="admin-tab-tables"
+                            class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-xs font-bold">Tables</button>
+                    </div>
+
+                    <!-- Tab 1: Menu Management -->
+                    <div id="admin-panel-menu" class="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-sm text-[#35251F]">All Products (Prices are fully editable)</h4>
+                            <span
+                                class="text-xs text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">⚠️
+                                Verify prices before live launch</span>
+                        </div>
+                        <div id="admin-menu-list" class="space-y-3">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Orders -->
+                    <div id="admin-panel-orders" class="hidden space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+                        <h4 class="font-bold text-sm text-[#35251F]">Customer Dine-in Orders</h4>
+                        <div id="admin-orders-list" class="space-y-3">
+                            <p class="text-xs text-gray-500">No active orders yet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Tables -->
+                    <div id="admin-panel-tables" class="hidden space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+                        <h4 class="font-bold text-sm text-[#35251F]">Dine-In Tables Status</h4>
+                        <div id="admin-tables-list" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast"
+        class="fixed bottom-6 right-6 z-50 bg-[#35251F] text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium">Added to cart successfully!</span>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- COMPLETE PRODUCT DATABASE TRANSCRIBED FROM MENU ---
+        let products = [
+            // A. HOT BEVERAGES
+            { id: 'b1', name: 'Adrak Chai', category: 'Hot Beverages', price: 12, desc: 'Traditional Indian ginger tea served hot', bestseller: true, available: true, image: 'https://i0.wp.com/cookingfromheart.com/wp-content/uploads/2017/12/Ginger-Tea-4.jpg?resize=683%2C1024&ssl=1' },
+            { id: 'b2', name: 'Elaichi Chai', category: 'Hot Beverages', price: 12, desc: 'Aromatic cardamom infused tea', bestseller: true, available: true, image: 'https://i0.wp.com/cookingfromheart.com/wp-content/uploads/2017/12/Ginger-Tea-4.jpg?resize=683%2C1024&ssl=1' },
+            { id: 'b3', name: 'Choco Chai', category: 'Hot Beverages', price: 15, desc: 'Chai blended with chocolate warmth', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyqbBS5ICf6PwObaCXZ06GdSnd2APO8Wq1jpEgOJ1haw&s=10' },
+            { id: 'b4', name: 'Lemon Tea', category: 'Hot Beverages', price: 20, desc: 'Refreshing brewed lemon tea', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b5', name: 'Black Tea', category: 'Hot Beverages', price: 15, desc: 'Pure strong black tea', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b6', name: 'Black Coffee', category: 'Hot Beverages', price: 15, desc: 'Rich brewed black coffee', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b7', name: 'Classic Coffee', category: 'Hot Beverages', price: 25, desc: 'Smooth classic milk coffee', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b8', name: 'Hazelnut Coffee', category: 'Hot Beverages', price: 35, desc: 'Coffee infused with hazelnut flavor', bestseller: true, available: true, image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b9', name: 'Caramel Coffee', category: 'Hot Beverages', price: 35, desc: 'Sweet caramel notes in warm coffee', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b10', name: 'Chocolate Coffee', category: 'Hot Beverages', price: 30, desc: 'Rich chocolate blended coffee', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b11', name: 'Bournvita Coffee', category: 'Hot Beverages', price: 35, desc: 'Malty Bournvita mixed coffee', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=400' },
+            { id: 'b12', name: 'Hot Chocolate', category: 'Hot Beverages', price: 35, desc: 'Warm creamy hot chocolate', bestseller: false, available: true, image: 'https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&q=80&w=400' },
+
+            // B. BUN MASKA
+            { id: 'bm1', name: 'Bun Maska Butter', category: 'Bun Maska', price: 30, desc: 'Classic buttery soft toasted bun', bestseller: true, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9NGf1Yi-ogx0bJs4z3P-h9d3lyWtS97ytePrCqQQc-A&s=10' },
+            { id: 'bm2', name: 'Bun Maska Jam', category: 'Bun Maska', price: 35, desc: 'Butter and sweet jam spread on bun', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8TfME78vbjxSr9FV6EYq0wq1v8GoXHoonTadFUqYxLolfxhQChRf5_8H&s=10' },
+            { id: 'bm3', name: 'Bun Maska Chocolate', category: 'Bun Maska', price: 35, desc: 'Rich chocolate spread on bun', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEGPpoFCL6aEbbGi_tDHAtfN2Mvzzn-JSzXinw-wtag&s=10' },
+            { id: 'bm4', name: 'Bun Maska Cheese', category: 'Bun Maska', price: 40, desc: 'Melted cheese layered on buttery bun', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI_9irC9rSD8Hn7NVrxqc8K4kzRzdfUcQxhztPL1olcQ&s=10' },
+
+            // C. VADA PAV
+            { id: 'vp1', name: 'Bombay Vada Pav', category: 'Vada Pav', price: 30, desc: 'Iconic street style spicy potato vada in pav', bestseller: true, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jBEioGoYA7BLImvh0bXS6Zjy5isPiX5mUq6je6TOIg&s=10' },
+            { id: 'vp2', name: 'Veg Crispy Vada Pav', category: 'Vada Pav', price: 35, desc: 'Crunchy vegetable patty vada pav', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jBEioGoYA7BLImvh0bXS6Zjy5isPiX5mUq6je6TOIg&s=10' },
+            { id: 'vp3', name: 'Schezwan Vada Pav', category: 'Vada Pav', price: 40, desc: 'Spicy schezwan sauce loaded vada pav', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jBEioGoYA7BLImvh0bXS6Zjy5isPiX5mUq6je6TOIg&s=10' },
+            { id: 'vp4', name: 'Makai Palak Vada Pav', category: 'Vada Pav', price: 50, desc: 'Corn and spinach infused vada pav', bestseller: false, available: true, image: 'https://cdn.mygingergarlickitchen.com/images/800px/800px-vada-pav-recipe-1.jpg' },
+            { id: 'vp5', name: 'Cheese Burst Vada Pav', category: 'Vada Pav', price: 80, desc: 'Overflowing liquid cheese inside vada pav', bestseller: true, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8mvPOyAJgXl_0SRONPbDpcJFg-HVxsm8ZoZ1V-PzF6EXrk3danPh4ptg&s=10' },
+            { id: 'vp6', name: 'Paneer Italian Vada Pav', category: 'Vada Pav', price: 90, desc: 'Paneer with Italian herbs in vada pav', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCIFs3oOP1jTrzhrcLKjMJjYCX5m-OJpu9RxNmtBfL-g&s=10' },
+
+            // D. FRENCH FRIES
+            { id: 'f2', name: 'Peri Peri Fries', category: 'French Fries', price: 70, desc: 'Fries tossed in spicy peri peri seasoning', bestseller: true, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4H0iHp7Iknqd_SkmyRA8PT8Gah3KbTbky4tqnULkJO0vDmyuGEpG2Ti4&s=10' },
+            { id: 'f1', name: 'Regular Salted Fries', category: 'French Fries', price: 60, desc: 'Crispy golden salted french fries', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6yYZ1hz2et70abaS5VYnNrh_Q5bakN5TiX1jwqg1jzi5bbc_aZkIZ2QRm&s=10 '},
+            { id: 'f3', name: 'Cheesy Fries', category: 'French Fries', price: 80, desc: 'Fries drenched in warm melted cheese', bestseller: true, available: true, image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=400' },
+            { id: 'f4', name: 'Masala Fries', category: 'French Fries', price: 80, desc: 'Indian chatpata masala tossed fries', bestseller: false, available: true, image: 'https://www.simplotfood.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F0dkgxhks0leg%2F4b7k1GWICg1yrKyLsHIwwS%2F89ce0cd8af4527ee6139c9a2df13097d%2FRed_Hot_Chili_Pepper_Fries.jpg%3Ffm%3Dwebp&w=3840&q=75' },
+
+            // E. MAGGI
+            { id: 'm1', name: 'Masala Maggi', category: 'Maggi', price: 45, desc: 'Classic instant masala noodles', bestseller: true, available: true, image: 'https://www.shutterstock.com/image-photo/create-red-bowl-maggi-masala-260nw-2654022925.jpg' },
+            { id: 'm2', name: 'Veggie Maggi', category: 'Maggi', price: 55, desc: 'Maggi loaded with fresh garden vegetables', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTfJ5NGaCEGQEbb6E1TEJMYOiKAmqsO8ChDQYdpns-7QUTvYaSoZU9Aso&s=10' },
+            { id: 'm3', name: 'Peri Peri Maggi', category: 'Maggi', price: 70, desc: 'Spicy peri peri twist to maggi', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUcWmqqd3tjrI_1UounJYZNqZu9KMp29JOJlnU4HoTcWmgDYkjQ_tkGCw&s=10' },
+            { id: 'm4', name: 'Corn Cheese Maggi', category: 'Maggi', price: 70, desc: 'Sweet corn and gooey cheese maggi', bestseller: true, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfN19mR2bblfjPD_kcWp44eMfzN7viIORXAzeDOVATq0-KYEt_aPhrMVu&s=10' },
+            { id: 'm5', name: 'Tadka Maggi', category: 'Maggi', price: 70, desc: 'Desi ghee tadka maggi with garlic and chillies', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZOTYWbnta6QdQ0I1I_GO0n9M1RbBp7-lXC_f9F5hS3hPco4p6DIZP9vw&s=10' },
+            { id: 'm6', name: 'Special Maggi', category: 'Maggi', price: 80, desc: 'Chef special loaded maggi noodles', bestseller: false, available: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuq1FqHhNheT2YY9Lbpf8mb2DVpBd4N6tujbZix779iQDKORLDUVMmAq1A&s=10' },
+            ];
+           
+
+        // Tables Database
+        let tables = [
+            { id: 1, name: 'Table 01', status: 'available' },
+            { id: 2, name: 'Table 02', status: 'available' },
+            { id: 3, name: 'Table 03', status: 'occupied' },
+            { id: 4, name: 'Table 04', status: 'available' },
+            { id: 5, name: 'Table 05', status: 'reserved' },
+            { id: 6, name: 'Table 06', status: 'available' }
+        ];
+
+        let cart = [];
+        let currentCategory = 'All';
+        let selectedTable = null;
+        let activeOrders = [];
+
+        // Initialize Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderMenu();
+            renderTables();
+            updateCartUI();
+        });
+
+        // --- MENU RENDERING & FILTERING ---
+        function renderMenu() {
+            const grid = document.getElementById('product-grid');
+            const noProducts = document.getElementById('no-products');
+            grid.innerHTML = '';
+
+            let filtered = products.filter(p => {
+                const matchesCategory = currentCategory === 'All' || p.category === currentCategory;
+                const searchTxt = document.getElementById('menu-search').value.toLowerCase();
+                const matchesSearch = p.name.toLowerCase().includes(searchTxt) || p.desc.toLowerCase().includes(searchTxt);
+                return matchesCategory && matchesSearch;
+            });
+
+            // Sorting
+            const sortVal = document.getElementById('sort-select').value;
+            if (sortVal === 'price-low') filtered.sort((a, b) => a.price - b.price);
+            else if (sortVal === 'price-high') filtered.sort((a, b) => b.price - a.price);
+            else if (sortVal === 'popular') filtered.sort((a, b) => b.bestseller - a.bestseller);
+
+            if (filtered.length === 0) {
+                noProducts.classList.remove('hidden');
+                return;
+            } else {
+                noProducts.classList.add('hidden');
+            }
+
+            filtered.forEach(p => {
+                const cartItem = cart.find(item => item.id === p.id);
+                const qty = cartItem ? cartItem.quantity : 0;
+
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl p-4 shadow-sm border border-amber-200 hover:shadow-md transition-all flex flex-col justify-between relative group';
+                card.innerHTML = `
+                    <div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-amber-50 mb-4">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            ${p.bestseller ? '<span class="absolute top-2 left-2 bg-[#C94835] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">Bestseller</span>' : ''}
+                            ${!p.available ? '<div class="absolute inset-0 bg-black/60 flex items-center justify-center"><span class="text-white font-bold text-xs">Currently Unavailable</span></div>' : ''}
+                        </div>
+                        <div class="space-y-1 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C94835]">${p.category}</span>
+                            <h3 class="font-bold font-serif text-[#35251F] text-base">${p.name}</h3>
+                            <p class="text-xs text-gray-500 line-clamp-2">${p.desc}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-amber-100">
+                        <span class="text-lg font-bold text-[#6F3E25]">₹${p.price}</span>
+                        ${p.available ? (qty === 0 ? `
+                            <button onclick="addToCart('${p.id}')" class="px-4 py-2 bg-[#6F3E25] hover:bg-[#35251F] text-white text-xs font-bold rounded-full shadow transition-all">Add to Cart</button>
+                        ` : `
+                            <div class="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-2 py-1">
+                                <button onclick="updateQuantity('${p.id}', -1)" class="w-6 h-6 rounded-full bg-white text-[#6F3E25] font-bold text-xs flex items-center justify-center shadow-sm">-</button>
+                                <span class="text-xs font-bold text-[#35251F] w-4 text-center">${qty}</span>
+                                <button onclick="updateQuantity('${p.id}', 1)" class="w-6 h-6 rounded-full bg-[#6F3E25] text-white font-bold text-xs flex items-center justify-center shadow-sm">+</button>
+                            </div>
+                        `) : `<span class="text-xs text-gray-400 font-semibold">Sold Out</span>`}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function switchCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.dataset.category === cat) {
+                    btn.className = 'category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-[#6F3E25] text-white shadow-sm transition-all';
+                } else {
+                    btn.className = 'category-btn px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap bg-white text-[#35251F] border border-amber-200 hover:bg-amber-50 transition-all';
+                }
+            });
+            renderMenu();
+        }
+
+        function filterMenu() {
+            renderMenu();
+        }
+
+        function resetFilters() {
+            document.getElementById('menu-search').value = '';
+            document.getElementById('sort-select').value = 'default';
+            switchCategory('All');
+        }
+
+        // --- SHOPPING CART MANAGEMENT ---
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+            showToast(`Added ${product.name} to cart! ❤️`);
+            renderMenu();
+        }
+
+        function updateQuantity(productId, change) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index !== -1) {
+                cart[index].quantity += change;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCartUI();
+            renderMenu();
+        }
+
+        function addComboToCart(comboName, price) {
+            const existing = cart.find(item => item.name === comboName);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ id: 'combo_' + Date.now(), name: comboName, category: 'Special Combo', price: price, quantity: 1, image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=400' });
+            }
+            updateCartUI();
+            showToast(`Added combo "${comboName}" to cart! ❤️`);
+        }
+
+        function updateCartUI() {
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-badge').innerText = count;
+            document.getElementById('cart-item-count').innerText = count;
+
+            const container = document.getElementById('cart-items-container');
+            const emptyCart = document.getElementById('empty-cart');
+            const cartFooter = document.getElementById('cart-footer');
+            container.innerHTML = '';
+
+            if (cart.length === 0) {
+                emptyCart.classList.remove('hidden');
+                cartFooter.classList.add('hidden');
+                container.classList.add('hidden');
+                return;
+            }
+
+            emptyCart.classList.add('hidden');
+            cartFooter.classList.remove('hidden');
+            container.classList.remove('hidden');
+
+            let subtotal = 0;
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                const div = document.createElement('div');
+                div.className = 'flex items-center justify-between py-3';
+                div.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-xl object-cover bg-amber-50">
+                        <div>
+                            <h4 class="font-bold text-sm text-[#35251F]">${item.name}</h4>
+                            <p class="text-xs text-[#C94835] font-semibold">₹${item.price} x ${item.quantity}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-2 py-1">
+                        <button onclick="updateQuantity('${item.id}', -1)" class="w-6 h-6 rounded-full bg-white text-[#6F3E25] font-bold text-xs flex items-center justify-center shadow-sm">-</button>
+                        <span class="text-xs font-bold text-[#35251F] w-4 text-center">${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.id}', 1)" class="w-6 h-6 rounded-full bg-[#6F3E25] text-white font-bold text-xs flex items-center justify-center shadow-sm">+</button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+
+            document.getElementById('cart-subtotal').innerText = `₹${subtotal}`;
+            document.getElementById('cart-total').innerText = `₹${subtotal}`;
+
+            // Update table banner in cart
+            const tableText = document.getElementById('cart-table-text');
+            if (selectedTable) {
+                tableText.innerText = `Dine-in: ${selectedTable.name}`;
+            } else {
+                tableText.innerText = `Dine-in: No Table Selected`;
+            }
+            lucide.createIcons();
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        // --- DINE-IN TABLE SELECTION ---
+        function openDineInModal() {
+            document.getElementById('dine-in-modal').classList.remove('hidden');
+            renderTables();
+        }
+
+        function closeDineInModal() {
+            document.getElementById('dine-in-modal').classList.add('hidden');
+        }
+
+        let tempSelectedTableId = null;
+
+        function renderTables() {
+            const grid = document.getElementById('tables-grid');
+            grid.innerHTML = '';
+            tables.forEach(t => {
+                let statusColor = 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100';
+                let statusText = 'Available';
+                if (t.status === 'occupied') {
+                    statusColor = 'bg-red-50 text-red-700 border-red-200 opacity-60 cursor-not-allowed';
+                    statusText = 'Occupied';
+                } else if (t.status === 'reserved') {
+                    statusColor = 'bg-amber-50 text-amber-700 border-amber-200 opacity-60 cursor-not-allowed';
+                    statusText = 'Reserved';
+                }
+
+                if (tempSelectedTableId === t.id) {
+                    statusColor = 'bg-[#6F3E25] text-white border-[#6F3E25] shadow-lg';
+                }
+
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-2xl border text-center transition-all cursor-pointer ${statusColor}`;
+                if (t.status === 'available') {
+                    card.onclick = () => selectTempTable(t.id);
+                }
+                card.innerHTML = `
+                    <p class="font-bold text-base font-serif">${t.name}</p>
+                    <p class="text-[11px] font-semibold mt-1">${statusText}</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function selectTempTable(id) {
+            tempSelectedTableId = id;
+            document.getElementById('confirm-table-btn').disabled = false;
+            document.getElementById('confirm-table-btn').classList.remove('opacity-50', 'cursor-not-allowed');
+            renderTables();
+        }
+
+        function confirmTableSelection() {
+            if (!tempSelectedTableId) return;
+            selectedTable = tables.find(t => t.id === tempSelectedTableId);
+            closeDineInModal();
+            showToast(`Selected ${selectedTable.name} successfully! ❤️`);
+            updateCartUI();
+        }
+
+        // --- CHECKOUT & ORDER SUBMISSION ---
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                showToast('Your cart is empty!');
+                return;
+            }
+            if (!selectedTable) {
+                showToast('Please select a dine-in table first!');
+                openDineInModal();
+                return;
+            }
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('checkout-total').innerText = `₹${total}`;
+            document.getElementById('checkout-table-display').innerText = selectedTable.name;
+
+            toggleCartDrawer();
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const notes = document.getElementById('cust-notes').value;
+            const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            const newOrder = {
+                id: '#HCHAI-' + Math.floor(1000 + Math.random() * 9000),
+                table: selectedTable.name,
+                name: name,
+                phone: phone,
+                notes: notes,
+                paymentMethod: paymentMethod,
+                items: [...cart],
+                total: total,
+                status: 'Preparing',
+                timestamp: new Date().toLocaleTimeString()
+            };
+
+            activeOrders.unshift(newOrder);
+
+            // Mark table as occupied
+            const tableObj = tables.find(t => t.id === selectedTable.id);
+            if (tableObj) tableObj.status = 'occupied';
+
+            // Clear Cart
+            cart = [];
+            updateCartUI();
+            closeCheckoutModal();
+
+            // Show Confirmation
+            document.getElementById('conf-order-id').innerText = newOrder.id;
+            document.getElementById('conf-table').innerText = newOrder.table;
+            document.getElementById('conf-name').innerText = newOrder.name;
+            document.getElementById('confirmation-modal').classList.remove('hidden');
+        }
+
+        function closeConfirmationModal() {
+            document.getElementById('confirmation-modal').classList.add('hidden');
+            selectedTable = null;
+        }
+
+        // --- LIGHTBOX GALLERY ---
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+            document.getElementById('lightbox-modal').classList.add('flex');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.getElementById('lightbox-modal').classList.remove('flex');
+        }
+
+        // --- PROTECTED ADMIN DASHBOARD ---
+        function toggleAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+            // Reset to pin screen
+            document.getElementById('admin-login-view').classList.remove('hidden');
+            document.getElementById('admin-dashboard-view').classList.add('hidden');
+            document.getElementById('admin-pin-input').value = '';
+        }
+
+        function verifyAdminPin() {
+            const pin = document.getElementById('admin-pin-input').value;
+            if (pin === '1234') {
+                document.getElementById('admin-login-view').classList.add('hidden');
+                document.getElementById('admin-dashboard-view').classList.remove('hidden');
+                renderAdminMenu();
+                renderAdminOrders();
+                renderAdminTables();
+                showToast('Welcome to HOT Chai Admin Dashboard!');
+            } else {
+                showToast('Incorrect PIN! Try 1234');
+            }
+        }
+
+        function switchAdminTab(tab) {
+            document.getElementById('admin-panel-menu').classList.add('hidden');
+            document.getElementById('admin-panel-orders').classList.add('hidden');
+            document.getElementById('admin-panel-tables').classList.add('hidden');
+            document.getElementById('admin-tab-menu').className = 'px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-xs font-bold';
+            document.getElementById('admin-tab-orders').className = 'px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-xs font-bold';
+            document.getElementById('admin-tab-tables').className = 'px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-xs font-bold';
+
+            if (tab === 'menu') {
+                document.getElementById('admin-panel-menu').classList.remove('hidden');
+                document.getElementById('admin-tab-menu').className = 'px-4 py-2 rounded-lg bg-[#6F3E25] text-white text-xs font-bold';
+            } else if (tab === 'orders') {
+                document.getElementById('admin-panel-orders').classList.remove('hidden');
+                document.getElementById('admin-tab-orders').className = 'px-4 py-2 rounded-lg bg-[#6F3E25] text-white text-xs font-bold';
+            } else if (tab === 'tables') {
+                document.getElementById('admin-panel-tables').classList.remove('hidden');
+                document.getElementById('admin-tab-tables').className = 'px-4 py-2 rounded-lg bg-[#6F3E25] text-white text-xs font-bold';
+            }
+        }
+
+        function renderAdminMenu() {
+            const list = document.getElementById('admin-menu-list');
+            list.innerHTML = '';
+            products.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center justify-between p-3 rounded-xl bg-amber-50/50 border border-amber-200';
+                div.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${p.image}" class="w-10 h-10 rounded-lg object-cover">
+                        <div>
+                            <p class="font-bold text-sm text-[#35251F]">${p.name}</p>
+                            <p class="text-[11px] text-gray-500">${p.category}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <span class="text-xs font-bold">₹</span>
+                            <input type="number" value="${p.price}" onchange="updateProductPrice('${p.id}', this.value)" class="w-20 px-2 py-1 bg-white border border-amber-200 rounded-lg text-xs font-bold text-[#6F3E25] focus:outline-none">
+                        </div>
+                        <button onclick="toggleAvailability('${p.id}')" class="px-3 py-1 rounded-full text-xs font-bold ${p.available ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}">
+                            ${p.available ? 'Available' : 'Sold Out'}
+                        </button>
+                    </div>
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function updateProductPrice(id, newPrice) {
+            const prod = products.find(p => p.id === id);
+            if (prod) {
+                prod.price = Number(newPrice);
+                showToast(`Updated ${prod.name} price to ₹${newPrice}`);
+                renderMenu();
+            }
+        }
+
+        function toggleAvailability(id) {
+            const prod = products.find(p => p.id === id);
+            if (prod) {
+                prod.available = !prod.available;
+                renderAdminMenu();
+                renderMenu();
+                showToast(`Toggled availability for ${prod.name}`);
+            }
+        }
+
+        function renderAdminOrders() {
+            const list = document.getElementById('admin-orders-list');
+            document.getElementById('admin-order-count').innerText = activeOrders.length;
+            list.innerHTML = '';
+
+            if (activeOrders.length === 0) {
+                list.innerHTML = '<p class="text-xs text-gray-500">No active customer orders.</p>';
+                return;
+            }
+
+            activeOrders.forEach((o, index) => {
+                const div = document.createElement('div');
+                div.className = 'p-4 rounded-2xl bg-amber-50 border border-amber-200 space-y-3';
+                let itemsStr = o.items.map(i => `${i.name} (x${i.quantity})`).join(', ');
+                div.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-sm text-[#6F3E25]">${o.id} - ${o.table}</span>
+                        <span class="text-xs font-semibold text-gray-500">${o.timestamp}</span>
+                    </div>
+                    <p class="text-xs text-gray-700"><strong>Customer:</strong> ${o.name} (${o.phone || 'No phone'})</p>
+                    <p class="text-xs text-gray-700"><strong>Items:</strong> ${itemsStr}</p>
+                    <div class="flex justify-between items-center pt-2 border-t border-amber-200">
+                        <span class="font-bold text-sm text-[#C94835]">Total: ₹${o.total}</span>
+                        <div class="flex items-center gap-2">
+                            <select onchange="updateOrderStatus(${index}, this.value)" class="text-xs px-2 py-1 rounded-lg bg-white border border-amber-200 font-bold">
+                                <option ${o.status === 'Preparing' ? 'selected' : ''}>Preparing</option>
+                                <option ${o.status === 'Ready to Serve' ? 'selected' : ''}>Ready to Serve</option>
+                                <option ${o.status === 'Completed' ? 'selected' : ''}>Completed</option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function updateOrderStatus(index, status) {
+            activeOrders[index].status = status;
+            showToast(`Order ${activeOrders[index].id} marked as ${status}`);
+        }
+
+        function renderAdminTables() {
+            const list = document.getElementById('admin-tables-list');
+            list.innerHTML = '';
+            tables.forEach(t => {
+                const div = document.createElement('div');
+                div.className = 'p-3 rounded-xl border border-amber-200 bg-amber-50/50 flex flex-col justify-between items-center space-y-2';
+                div.innerHTML = `
+                    <p class="font-bold text-sm font-serif">${t.name}</p>
+                    <select onchange="updateTableStatus(${t.id}, this.value)" class="text-xs px-2 py-1 bg-white border border-amber-200 rounded-lg font-bold">
+                        <option value="available" ${t.status === 'available' ? 'selected' : ''}>Available</option>
+                        <option value="occupied" ${t.status === 'occupied' ? 'selected' : ''}>Occupied</option>
+                        <option value="reserved" ${t.status === 'reserved' ? 'selected' : ''}>Reserved</option>
+                    </select>
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function updateTableStatus(tableId, status) {
+            const t = tables.find(tb => tb.id === tableId);
+            if (t) {
+                t.status = status;
+                showToast(`Table ${t.name} status updated to ${status}`);
+            }
+        }
+
+        // --- UTILS ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
